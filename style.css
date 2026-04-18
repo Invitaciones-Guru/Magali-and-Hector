@@ -24,7 +24,7 @@ h1, h2, h3 {
 
 /* HERO */
 .hero {
-    height: 100vh;
+    min-height: 100dvh; /* Cambiado para que se adapte perfecto a celulares */
     background: url('portada.jpeg') center/cover no-repeat;
     display: flex; align-items: center; justify-content: center;
 }
@@ -36,16 +36,13 @@ h1, h2, h3 {
 }
 .top-label { font-size: 0.7rem; letter-spacing: 6px; color: var(--gray-text); margin-bottom: 20px; }
 h1 { font-size: 2.5rem; }
-.hero-date { font-size: 1rem; letter-spacing: 4px; border-top: 1px solid var(--black); margin-top: 20px; padding-top: 15px; }
+.hero-date { font-size: 1rem; letter-spacing: 4px; border-top: 1px solid var(--black); margin-top: 20px; padding-top: 15px; margin-bottom: 0; } /* Agregué margin-bottom: 0 para quitar espacio extra */
 
 /* SECCIONES */
 .section-padding { padding: 100px 20px; }
 .quote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.6rem; max-width: 700px; margin: 0 auto 60px; }
 .parents-grid { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; }
 .parents-col h3 { font-size: 0.8rem; letter-spacing: 2px; color: var(--gray-text); margin-bottom: 20px; }
-
-
-
 
 /* SECCIÓN INTRO PREMIUM */
 .premium-intro-section {
@@ -105,7 +102,7 @@ h1 { font-size: 2.5rem; }
 }
 
 .name-script {
-    font-family: 'Alex Brush', cursive; /* Asegúrate de tenerla en tu HTML */
+    font-family: 'Alex Brush', cursive; 
     font-size: 2.4rem;
     margin: 0;
     color: var(--black);
@@ -125,7 +122,7 @@ h1 { font-size: 2.5rem; }
     background-color: #f0f0f0;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE PADRES */
 @media (max-width: 768px) {
     .parents-container {
         flex-direction: column;
@@ -143,12 +140,6 @@ h1 { font-size: 2.5rem; }
     }
 }
 
-
-
-
-
-
-
 /* IMAGEN ANCHO COMPLETO */
 .full-photo { width: 100%; height: 500px; }
 .full-photo img { width: 100%; height: 100%; object-fit: cover; }
@@ -163,10 +154,10 @@ h1 { font-size: 2.5rem; }
 .event-hour { font-family: 'Cormorant Garamond', serif; font-size: 2rem; min-width: 120px; color: var(--gray-text); }
 .event-img { 
     width: 100%; 
-    height: 250px; /* Altura controlada para que no se vea gigante */
+    height: 250px; 
     margin: 20px 0; 
     overflow: hidden; 
-    border: 1px solid #f0f0f0; /* Un detalle casi invisible de elegancia */
+    border: 1px solid #f0f0f0; 
 }
 
 .event-img img { 
@@ -177,10 +168,8 @@ h1 { font-size: 2.5rem; }
 }
 
 .event-img:hover img { 
-    transform: scale(1.05); /* Micro-interacción premium al tocar la foto */
+    transform: scale(1.05); 
 }
-
-
 
 /* RSVP */
 .rsvp-section { padding: 100px 20px; background: var(--black); color: var(--white); }
@@ -200,16 +189,12 @@ h1 { font-size: 2.5rem; }
 /* FOOTER */
 .footer-guru { padding: 50px; font-size: 0.6rem; letter-spacing: 5px; opacity: 0.5; }
 
-/* MOBILE */
+/* MOBILE GENERAL */
 @media (max-width: 600px) {
     .event-item { flex-direction: column; }
     .hero-content { width: 90%; padding: 40px 20px; }
     .hero h1 { font-size: 1.8rem; }
 }
-
-
-
-
 
 /* DISEÑO ÁLBUM EDITORIAL PREMIUM */
 .album-editorial-section { 
@@ -233,8 +218,8 @@ h1 { font-size: 2.5rem; }
     text-align: left; 
 }
 
+/* Aquí borré el Bodoni Moda que deformaba el texto, ahora heredará el Garamond premium automáticamente */
 .album-title { 
-    font-family: 'Bodoni Moda', serif; 
     font-size: 3rem; 
     margin-bottom: 10px; 
     color: #1a1a1a;
@@ -243,7 +228,7 @@ h1 { font-size: 2.5rem; }
 .album-subtitle { 
     font-size: 0.7rem; 
     letter-spacing: 4px; 
-    color: #c5a059; /* Un tono dorado/bronce sutil */
+    color: #c5a059; 
     margin-bottom: 25px; 
     font-weight: 600;
 }
@@ -303,7 +288,7 @@ h1 { font-size: 2.5rem; }
     display: block;
 }
 
-/* Ajuste móvil */
+/* Ajuste móvil para álbum */
 @media (max-width: 768px) {
     .album-layout { grid-template-columns: 1fr; }
     .album-text { padding: 40px 20px; text-align: center; }
