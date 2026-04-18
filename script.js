@@ -1,5 +1,5 @@
 // 1. CUENTA REGRESIVA
-const targetDate = new Date("Jan 18, 2026 15:30:00").getTime();
+const targetDate = new Date("May 22, 2026 18:00:00").getTime();
 
 setInterval(() => {
     const now = new Date().getTime();
