@@ -1,7 +1,7 @@
 :root {
     --white: #ffffff;
     --black: #1a1a1a;
-    --gray-light: #f4f4f4;
+    --gray-light: #f9f9f9;
     --gray-text: #777777;
     --gold-text: #b39a6a;
 }
@@ -46,7 +46,17 @@ h1 { font-size: 2.5rem; }
 .parents-col h3 { font-size: 0.8rem; letter-spacing: 2px; color: var(--gray-text); margin-bottom: 20px; }
 .parent-name { font-family: 'Alex Brush', cursive; font-size: 2rem; margin: 5px 0; }
 
-/* ITINERARIO TOTALMENTE CENTRADO */
+/* IMAGEN FULL */
+.full-photo { width: 100%; height: 500px; }
+.full-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+/* COUNTDOWN RESTAURADO */
+.countdown-bar { background: var(--gray-light); padding: 60px 20px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+#countdown { font-family: 'Cormorant Garamond', serif; font-size: 2rem; letter-spacing: 2px; }
+.num { font-weight: 400; }
+.label { font-size: 0.8rem; font-family: 'Montserrat', sans-serif; color: var(--gray-text); margin-left: 2px; }
+
+/* ITINERARIO CENTRADO */
 .itinerary-section { padding: 100px 20px; max-width: 600px; margin: 0 auto; text-align: center; }
 .section-title { border-bottom: 1px solid var(--black); padding-bottom: 15px; margin-bottom: 80px; }
 .event-item { margin-bottom: 100px; }
@@ -58,21 +68,25 @@ h1 { font-size: 2.5rem; }
     text-decoration: none; color: var(--black); border-bottom: 1px solid var(--black); padding-bottom: 4px;
 }
 
-/* SECCIÓN QR (IGUAL A LA FOTO) */
-.qr-section { padding: 100px 20px; background: #fff; }
-.qr-container { max-width: 500px; margin: 0 auto; }
+/* SECCIÓN QR CON RECUADRO (ESTILO FOTO) */
+.qr-section { padding: 100px 20px; background: #fdfdfd; }
+.qr-card { 
+    max-width: 500px; margin: 0 auto; background: #fff; 
+    padding: 60px 30px; border: 1px solid #ececec; /* El recuadro de la periferia */
+}
 .qr-title { font-size: 3rem; margin-bottom: 10px; }
-.qr-subtitle { font-size: 0.7rem; letter-spacing: 4px; color: var(--gold-text); margin-bottom: 30px; font-weight: 400; }
-.qr-desc { font-size: 0.9rem; color: #999; margin-bottom: 40px; font-weight: 300; }
+.qr-subtitle { font-size: 0.7rem; letter-spacing: 4px; color: var(--gold-text); margin-bottom: 30px; }
+.qr-desc { font-size: 0.9rem; color: #999; margin-bottom: 40px; padding: 0 20px; }
 
 .btn-outline {
     display: inline-block; padding: 15px 60px; border: 1px solid #000;
     text-decoration: none; color: #000; font-size: 0.8rem; letter-spacing: 3px; margin-bottom: 60px;
+    transition: 0.3s;
 }
 
-.qr-box { padding: 40px; background: #fff; border: 1px solid #f9f9f9; display: inline-block; }
-.qr-box img { width: 180px; height: 180px; margin-bottom: 20px; }
-.qr-footer-text { font-size: 0.6rem; letter-spacing: 2px; color: #bbb; }
+.qr-inner-box { padding: 20px; display: inline-block; }
+.qr-inner-box img { width: 180px; height: 180px; margin-bottom: 20px; }
+.qr-footer-text { font-size: 0.6rem; letter-spacing: 2px; color: #bbb; text-transform: uppercase; }
 
 /* RSVP */
 .rsvp-section { padding: 100px 20px; background: var(--black); color: var(--white); }
@@ -92,6 +106,6 @@ h1 { font-size: 2.5rem; }
 
 /* RESPONSIVE */
 @media (max-width: 600px) {
-    .hero h1 { font-size: 2rem; }
+    .qr-card { padding: 40px 15px; border-width: 0.5px; }
     .event-img { height: 250px; }
 }
